@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+.card {
+    font-family: "Hind Madurai", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #DDE6E6;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    width: 26.688rem;
+    max-width: 400px;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 4px 25px rgba(0, 0, 0, 0.1), 0 4px 20px rgba(0, 0, 0, 0.1), 0 4px 15px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.1), 0 4px 5px rgba(0, 0, 0, 0.1);
+  }
+
+    .card:hover {
+        transform: translateY(-10px);
+    }
+
+.avaborder {
+  background: linear-gradient(to right, #00c6ff, #9c00ff);
+  padding: 4px;               
+  border-radius: 50%;
+  display: inline-block;
+  margin: auto;
+  align-items: center;
+}
+  .avatar {
+    
+ display: block;
+  width: 108px;
+  height: 107px;
+  border-radius: 50%;
+  object-fit: cover;
+  align-items: center;
+  background: #DDE6E6;
+  z-index: 1;
+  }
+
+  
+  .name {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #0E1420;
+    font-family:"Hind Madurai", sans-serif;
+    font-weight: 900;
+    text-align: center;
+  }
+  
+  .title {
+    color: #0E1420;
+    font-family:"Hind Madurai", sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .bio {
+    font-size: 0.8rem;
+    color: #0E1420;
+    margin-bottom: 0.2rem;
+    text-align: center;
+    font-family: "Hind Madurai", sans-serif;
+  }
+  
+  .buttonGroup {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .resumeButton:hover, .hireMeButton:hover {
+  transform: scale(1.05);
+  }
+
+  /* HIRE ME BUTTON – gradient background */
+  .hireMeButton {
+    background: linear-gradient(to right, #00c6ff, #9c00ff);
+    color: white;
+    border: none;
+    padding: 5px 14px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 150px;
+    height: 47px;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+  
+  /* RESUME BUTTON – gradient border, white background */
+  .resumeButton {
+    background: #DDE6E6;
+    padding: 5px 14px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    border: none;
+    width: 9.375rem;
+    height: 2.938rem;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+  
+  .resumeButton::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    padding: 4px; /* border thickness */
+    background: linear-gradient(to right, #00c6ff, #9c00ff);
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    z-index: -1;
+  }
+  
+  .buttonGroup1 {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    gap: 1.2rem 2rem;
+    flex-wrap: wrap;
+    margin-top: 0.8rem;
+   
+  }
+  
+  .dateTime {
+    font-size: 0.75rem;
+    color: #666;
+    text-align: center;
+    margin-top: 1.5rem;
+    font-family: "Hind Madurai", sans-serif;
+    font-weight: 400;
+  }
+  
+  .gradientButton {
+    padding-bottom: 0.2rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    background: #DDE6E6;
+    color: #0E1420;
+    position: relative;
+    transition: all 0.2s ease;
+
+  }
+  .gradientButton::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(135deg, #6e9cff, #6a00f4);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.2s ease;
+  }
+  
+  .gradientButton:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  .gradientButton:hover {
+    color: #ff6ec7;
+    transform: scale(1.05);
+  }
+  
