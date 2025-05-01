@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
 import styles from './ProfileCard.module.css';
 
 export default function ProfileCard({ onOpenPanel }) {
@@ -15,6 +16,7 @@ export default function ProfileCard({ onOpenPanel }) {
 
   return (
     <div className={styles.card}>
+      
         <div className={styles.avaborder}>
       <img
         src="/avatar.png"
@@ -35,14 +37,24 @@ export default function ProfileCard({ onOpenPanel }) {
 
 
       <div className={styles.buttonGroup1}>
-        <button className={styles.gradientButton} onClick={() => onOpenPanel('projects')}>Projects</button>
-        <button className={styles.gradientButton} onClick={() => onOpenPanel('skills')}>Skills</button>
-        <button className={styles.gradientButton} onClick={() => onOpenPanel('aspirations')}>Aspirations</button>
-        <button className={styles.gradientButton} onClick={() => onOpenPanel('education')}>Education</button>
-        <button className={styles.gradientButton} onClick={() => onOpenPanel('tools')}>Tools</button>
-        <button className={styles.gradientButton} onClick={() => onOpenPanel('certification')}>Certification</button>
-        
+      <button className={styles.gradientButton} onClick={() => onOpenPanel('projects')}>Projects</button>
+      <button className={styles.gradientButton} onClick={() => onOpenPanel('skills')}>Skills</button>
+      <button className={styles.gradientButton} onClick={() => onOpenPanel('aspirations')}>Aspirations</button>
+      <button className={styles.gradientButton} onClick={() => onOpenPanel('education')}>Education</button>
+      <button className={styles.gradientButton} onClick={() => onOpenPanel('tools')}>Tools</button>
+      <button className={styles.gradientButton} onClick={() => onOpenPanel('certification')}>Certification</button>
       </div>
+      <div className={styles.socials}>
+  <a href="https://instagram.com/estheticallybawo" target="_blank" rel="noopener noreferrer">
+    <FaInstagram />
+  </a>
+  <a href="https://linkedin.com/in/estheticallybawo" target="_blank" rel="noopener noreferrer">
+    <FaLinkedin />
+  </a>
+  <a href="https://github.com/estheticallybawo" target="_blank" rel="noopener noreferrer">
+    <FaGithub />
+  </a>
+</div>
       <div className={styles.dateTime}>
         {currentDateTime.replace(',', ' @').replace('GMT', '')} UTC
       </div>

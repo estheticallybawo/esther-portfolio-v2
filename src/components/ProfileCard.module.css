@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+
+:root {
+    --primary-gradient: linear-gradient(to right, #00c6ff, #9c00ff);
+    --shadow-lg: 0 4px 30px rgba(0, 0, 0, 0.1), 0 4px 25px rgba(0, 0, 0, 0.1), 0 4px 20px rgba(0, 0, 0, 0.1), 0 4px 15px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.1), 0 4px 5px rgba(0, 0, 0, 0.1);
+}
 .card {
     font-family: "Hind Madurai", sans-serif;
     display: flex;
@@ -11,9 +17,10 @@
     padding: 2rem;
     width: 26.688rem;
     max-width: 400px;
+    height: 35rem;
+    max-height: 682px;
     box-shadow: var(--shadow-lg);
     position: relative;
-    overflow: hidden;
     transition: transform 0.3s ease;
     
        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 4px 25px rgba(0, 0, 0, 0.1), 0 4px 20px rgba(0, 0, 0, 0.1), 0 4px 15px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.1), 0 4px 5px rgba(0, 0, 0, 0.1);
@@ -122,6 +129,9 @@
     -webkit-mask: 
       linear-gradient(#fff 0 0) content-box, 
       linear-gradient(#fff 0 0);
+    mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
     z-index: -1;
@@ -131,7 +141,7 @@
     display: grid;
     grid-template-columns: repeat(3, auto);
     justify-content: center;
-    gap: 1.2rem 2rem;
+    gap: 1rem 3.5rem;
     flex-wrap: wrap;
     margin-top: 0.8rem;
    
@@ -148,7 +158,8 @@
   
   .gradientButton {
     padding-bottom: 0.2rem;
-    font-size: 0.85rem;
+    font-family: "Hind Madurai", sans-serif;
+    font-size: 0.95rem;
     font-weight: 600;
     border: none;
     border-radius: 999px;
@@ -167,7 +178,7 @@
     left: 0;
     width: 100%;
     height: 4px;
-    background: linear-gradient(135deg, #6e9cff, #6a00f4);
+    background: linear-gradient(135deg, #6ed1ff, #9c03f5);
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.2s ease;
@@ -179,7 +190,35 @@
   }
   
   .gradientButton:hover {
-    color: #ff6ec7;
+    color:  #9c03f5;
     transform: scale(1.05);
+  }
+  .socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .socials a {
+    width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #f7fafc;
+            display: grid;
+            place-items: center;
+            transition: all 0.3s ease;
+            color: #23324E;
+            text-decoration: none;
+    transition: transform 0.2s ease, color 0.3s ease;
+  }
+  
+  .socials a:hover {
+    background: var(--primary-gradient);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            border: 2px solid;
   }
   
