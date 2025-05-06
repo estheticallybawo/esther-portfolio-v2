@@ -37,7 +37,7 @@ export default function ProfileCard({ onOpenPanel }) {
       <img
         src="/avatar.png"
         alt="Esther"
-        className={styles.avatar}
+        className={styles.avatar} data-theme={theme}
       />
       </div>
       <h1 className={styles.name}>Hi! my name is Esther </h1>
@@ -47,8 +47,15 @@ export default function ProfileCard({ onOpenPanel }) {
        Eager to learn and grow in a collaborative environment, I am committed to delivering high-quality software solutions that meet user needs and exceed expectations.
       </p>
       <div className={styles.buttonGroup}>
-  <button className={styles.hireMeButton}>Hire Me</button>
-  <button className={styles.resumeButton}>Resume</button>
+  <a className={styles.hireMeButton}
+    href="https://wa.me/+2348025859769" 
+    target="_blank" 
+    rel="noopener noreferrer">Hire Me</a>
+  <a className={styles.resumeButton}
+  href="/Resume.pdf" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  >Resume</a>
 </div>
 
 

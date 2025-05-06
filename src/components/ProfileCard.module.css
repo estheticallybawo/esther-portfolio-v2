@@ -101,6 +101,10 @@
     height: 47px;
     flex-shrink: 0;
     transition: transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
   }
   
   /* RESUME BUTTON – gradient border, white background */
@@ -117,6 +121,11 @@
     height: 2.938rem;
     flex-shrink: 0;
     transition: transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #191a1a;
   }
   
   .resumeButton::before {
@@ -222,7 +231,8 @@
             border: 2px solid;
   }
 
-  [data-theme="dark"] .card, .avatar {
+  [data-theme="dark"] .card,
+  [data-theme="dark"] .avatar {
     background: #0E1420;
   }
   

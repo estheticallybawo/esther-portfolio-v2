@@ -53,6 +53,6 @@
   opacity: 0;
 }
 [data-theme="dark"] .themeToggle {
-  background: black;
+  background: #2d3748;
   color: white;
 }
