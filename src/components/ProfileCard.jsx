@@ -41,7 +41,7 @@ export default function ProfileCard({ onOpenPanel }) {
       />
       </div>
       <h1 className={styles.name}>Hi! my name is Esther </h1>
-      <p className={styles.title}>A Passionate Frontend | Software Engineer</p>
+      <p className={styles.title}>Passionate Frontend | Software Engineer</p>
       <p className={styles.bio}>
       I am a Software Engineering Student specializing in creating intuitive and esthetically pleasing user experiences.
        Eager to learn and grow in a collaborative environment, I am committed to delivering high-quality software solutions that meet user needs and exceed expectations.

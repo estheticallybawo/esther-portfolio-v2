@@ -3,19 +3,6 @@ import styles from './ThemeToggle.module.css';
 import nightIcon from '../assets/night.png';
 import sunIcon from '../assets/sun.png';
 
-const [theme, setTheme] = useState('light');
-
-      const toggleTheme = () => {
-        setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
-      };
-
-      useEffect(() => {
-        document.documentElement.setAttribute('data-theme', theme);
-
-        localStorage.setItem('theme', theme);
-  }, [theme]);
-
-
 const ThemeToggle = ({ theme, toggleTheme }) => {
   return (
     <button 
@@ -36,7 +23,6 @@ const ThemeToggle = ({ theme, toggleTheme }) => {
         />
       </span>
     </button>
-
   );
 };
 

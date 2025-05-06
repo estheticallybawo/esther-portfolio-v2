@@ -165,7 +165,7 @@
     border-radius: 999px;
     cursor: pointer;
     margin-top: 0.5rem;
-    background: #DDE6E6;
+    background: none;
     color: #0E1420;
     position: relative;
     transition: all 0.2s ease;
@@ -222,5 +222,40 @@
             border: 2px solid;
   }
 
+  [data-theme="dark"] .card, .avatar {
+    background: #0E1420;
+  }
+  
+  [data-theme="dark"] .name,
+  [data-theme="dark"] .title,
+  [data-theme="dark"] .bio,
+  [data-theme="dark"] .dateTime {
+    color: #e2e8f0;
+  }
+  
+  [data-theme="dark"] .resumeButton {
+    background: #0E1420;
+    color: #e2e8f0;
+  }
+  
+  [data-theme="dark"] .gradientButton {
+    background: none;
+    color: #e2e8f0;
+  }
+  
+  [data-theme="dark"] .socials a {
+    background: #2d3748;
+    color: #e2e8f0;
+  }
+  [data-theme="dark"] .socials a:hover {
+    background: var(--primary-gradient);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
 
+  [data-theme="dark"] .gradientButton:hover {
+    color: #6ed1ff;
+    transform: scale(1.05);
+  }
  

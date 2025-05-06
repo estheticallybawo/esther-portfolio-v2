@@ -52,28 +52,7 @@
 .hidden {
   opacity: 0;
 }
-
-/* Dark mode variables */
-[data-theme="dark"] {
-  --bg-color: #0E1420;
-  --text-color: #e2e8f0;
-  --social-bg: #2d3748;
-  --border-color: #4a5568;
-  --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+[data-theme="dark"] .themeToggle {
+  background: black;
+  color: white;
 }
-
-/* Update card to use variables */
-.card {
-  background: var(--bg-color);
-
-
-}
-
-.name, .title, .bio {
-  color: var(--text-color);
-}
-
-.socials a {
-  background: var(--social-bg);
-}
-  
