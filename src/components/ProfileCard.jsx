@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import ThemeToggle from './ThemeToggle.jsx';
 import { FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
 import styles from './ProfileCard.module.css';
+
+
 
 export default function ProfileCard({ onOpenPanel }) {
     const currentDateTime = new Date().toLocaleString('en-US', {
@@ -14,9 +17,22 @@ export default function ProfileCard({ onOpenPanel }) {
         timeZone: 'UTC'
       });
 
+      const [theme, setTheme] = useState('light');
+
+      const toggleTheme = () => {
+        setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
+      };
+
+      useEffect(() => {
+        document.documentElement.setAttribute('data-theme', theme);
+
+        localStorage.setItem('theme', theme);
+  }, [theme]);
+
   return (
-    <div className={styles.card}>
-      
+    <div className={styles.card} data-theme={theme}>
+    <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+  
         <div className={styles.avaborder}>
       <img
         src="/avatar.png"
@@ -24,7 +40,7 @@ export default function ProfileCard({ onOpenPanel }) {
         className={styles.avatar}
       />
       </div>
-      <h1 className={styles.name}>Hi name is Esther </h1>
+      <h1 className={styles.name}>Hi! my name is Esther </h1>
       <p className={styles.title}>A Passionate Frontend | Software Engineer</p>
       <p className={styles.bio}>
       I am a Software Engineering Student specializing in creating intuitive and esthetically pleasing user experiences.

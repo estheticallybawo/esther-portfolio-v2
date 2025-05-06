@@ -12,7 +12,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #DDE6E6;
+    background: #DDE6E6 ;
     border-radius: 1.5rem;
     padding: 2rem;
     width: 26.688rem;
@@ -221,4 +221,6 @@
             box-shadow: var(--shadow-lg);
             border: 2px solid;
   }
-  
+
+
+ 

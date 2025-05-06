@@ -1,0 +1,79 @@
+.themeToggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #ffffff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    transition: transform 0.3s ease;
+     z-index: 12;
+}
+
+.themeToggle:hover {
+  transform: scale(1.1);
+}
+
+.themeIcon {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.themeToggleContainer {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 25px;
+  height: 25px;
+  z-index: 10; }
+
+
+.themeIconImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    transition: opacity 0.3s ease;}
+
+
+.visible {
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+/* Dark mode variables */
+[data-theme="dark"] {
+  --bg-color: #0E1420;
+  --text-color: #e2e8f0;
+  --social-bg: #2d3748;
+  --border-color: #4a5568;
+  --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+/* Update card to use variables */
+.card {
+  background: var(--bg-color);
+
+
+}
+
+.name, .title, .bio {
+  color: var(--text-color);
+}
+
+.socials a {
+  background: var(--social-bg);
+}
+  
