@@ -3,7 +3,7 @@ import styles from './ProfileCard.module.css';
 import { FaGithub, FaLink } from 'react-icons/fa6';
 import { IoMdCloseCircleOutline } from "react-icons/io";
 
-export default function ProjectsCard({ onClose }) {
+export default function ProjectsPanel({ onClose }) {
   return (
     <div className={styles.projectsModal}>
       <h2>Projects</h2>

@@ -2,10 +2,13 @@ import React, { useState, useEffect } from 'react';
 import ThemeToggle from './ThemeToggle.jsx';
 import { FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
 import styles from './ProfileCard.module.css';
+import ProjectsPanel from './ProjectsPanel.jsx';
 
 
 
 export default function ProfileCard({ onOpenPanel }) {
+  const [showProjects, setShowProjects] = useState(false);
+
     const currentDateTime = new Date().toLocaleString('en-US', {
         weekday: 'long',
         year: 'numeric',
@@ -60,13 +63,22 @@ export default function ProfileCard({ onOpenPanel }) {
 
 
       <div className={styles.buttonGroup1}>
-      <button className={styles.gradientButton} onClick={() => onOpenPanel('projects')}>Projects</button>
+      <button className={styles.gradientButton} onClick={() => setShowProjects(true)}>Projects</button>
       <button className={styles.gradientButton} onClick={() => onOpenPanel('skills')}>Skills</button>
       <button className={styles.gradientButton} onClick={() => onOpenPanel('aspirations')}>Aspirations</button>
       <button className={styles.gradientButton} onClick={() => onOpenPanel('education')}>Education</button>
       <button className={styles.gradientButton} onClick={() => onOpenPanel('tools')}>Tools</button>
       <button className={styles.gradientButton} onClick={() => onOpenPanel('certification')}>Certification</button>
       </div>
+
+      {showProjects && (
+        <>
+          <div className={styles.overlay} onClick={() => setShowProjects(false)} />
+          <ProjectsPanel onClose={() => setShowProjects(false)} />
+        </>
+      )}
+
+
       <div className={styles.socials}>
   <a href="https://instagram.com/estheticallybawo" target="_blank" rel="noopener noreferrer">
     <FaInstagram />
@@ -82,6 +94,7 @@ export default function ProfileCard({ onOpenPanel }) {
         {currentDateTime.replace(',', ' @').replace('GMT', '')} UTC
       </div>
     </div>
+
 
   );
 }
