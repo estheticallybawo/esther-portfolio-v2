@@ -40,7 +40,7 @@ export default function ProfileCard({ onOpenPanel }) {
         className={styles.avatar} data-theme={theme}
       />
       </div>
-      <h1 className={styles.name}>Hi! my name is Esther </h1>
+      <h1 className={styles.name}>Hi! My Name is Esther </h1>
       <p className={styles.title}>Passionate Frontend | Software Engineer</p>
       <p className={styles.bio}>
       I am a Software Engineering Student specializing in creating intuitive and esthetically pleasing user experiences.

@@ -6,6 +6,7 @@
     --primary-gradient: linear-gradient(to right, #00c6ff, #9c00ff);
     --shadow-lg: 0 4px 30px rgba(0, 0, 0, 0.1), 0 4px 25px rgba(0, 0, 0, 0.1), 0 4px 20px rgba(0, 0, 0, 0.1), 0 4px 15px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.1), 0 4px 5px rgba(0, 0, 0, 0.1);
 }
+
 .card {
     font-family: "Hind Madurai", sans-serif;
     display: flex;
@@ -22,12 +23,11 @@
     box-shadow: var(--shadow-lg);
     position: relative;
     transition: transform 0.3s ease;
-    
-       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 4px 25px rgba(0, 0, 0, 0.1), 0 4px 20px rgba(0, 0, 0, 0.1), 0 4px 15px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.1), 0 4px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 4px 25px rgba(0, 0, 0, 0.1), 0 4px 20px rgba(0, 0, 0, 0.1), 0 4px 15px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.1), 0 4px 5px rgba(0, 0, 0, 0.1);
   }
 
     .card:hover {
-        transform: translateY(-10px);
+    transform: translateY(-10px);
     }
 
 .avaborder {
@@ -38,9 +38,8 @@
   margin: auto;
   align-items: center;
 }
-  .avatar {
-    
- display: block;
+  .avatar {  
+  display: block;
   width: 108px;
   height: 107px;
   border-radius: 50%;
@@ -52,7 +51,7 @@
 
   
   .name {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: bold;
     color: #0E1420;
     font-family:"Hind Madurai", sans-serif;
@@ -231,9 +230,93 @@
             border: 2px solid;
   }
 
+
+/* Add to ProfileCard.module.css */
+
+.projectsModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  width: 80%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-out;
+}
+
+.quote {
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.projectItem {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.projectItem:last-child {
+  border-bottom: none;
+}
+
+.projectItem h3 {
+  color: #6a00f4;
+  margin-bottom: 0.5rem;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.2s;
+}
+
+.closeButton:hover {
+  color: #ff6ec7;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -40%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+/* Add overlay when card is open */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
   [data-theme="dark"] .card,
   [data-theme="dark"] .avatar {
-    background: #0E1420;
+    background: #23324E;
   }
   
   [data-theme="dark"] .name,
@@ -244,7 +327,7 @@
   }
   
   [data-theme="dark"] .resumeButton {
-    background: #0E1420;
+    background: #23324E;
     color: #e2e8f0;
   }
   
