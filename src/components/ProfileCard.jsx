@@ -3,10 +3,13 @@ import ThemeToggle from './ThemeToggle.jsx';
 import { FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
 import styles from './ProfileCard.module.css';
 import ProjectsPanel from './ProjectsPanel.jsx';
+import EducationPanel from './EducationPanel.jsx';
 
 
 export default function ProfileCard({ onOpenPanel }) {
   const [showProjects, setShowProjects] = useState(false);
+  const [showEducation, setShowEducation] = useState(false);
+
 
     const currentDateTime = new Date().toLocaleString('en-US', {
         weekday: 'long',
@@ -73,7 +76,7 @@ export default function ProfileCard({ onOpenPanel }) {
       <button className={styles.gradientButton} onClick={() => setShowProjects(true)}>Projects</button>
       <button className={styles.gradientButton} onClick={() => onOpenPanel('skills')}>Skills</button>
       <button className={styles.gradientButton} onClick={() => onOpenPanel('aspirations')}>Aspirations</button>
-      <button className={styles.gradientButton} onClick={() => onOpenPanel('education')}>Education</button>
+      <button className={styles.gradientButton} onClick={() => setShowEducation(true)}>Education</button>
       <button className={styles.gradientButton} onClick={() => onOpenPanel('tools')}>Tools</button>
       <button className={styles.gradientButton} onClick={() => onOpenPanel('certification')}>Certification</button>
       </div>
@@ -85,6 +88,12 @@ export default function ProfileCard({ onOpenPanel }) {
         </>
       )}
 
+        {showEducation && (
+          <>
+            <div className={styles.overlay} onClick={() => setShowEducation(false)} />
+            <EducationPanel onClose={() => setShowEducation(false)} />
+          </>
+        )}
 
       <div className={styles.socials}>
   <a href="https://instagram.com/estheticallybawo" target="_blank" rel="noopener noreferrer">

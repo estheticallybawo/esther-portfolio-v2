@@ -14,7 +14,7 @@ export default function ProjectsPanel({ onClose }) {
 
   return (
     <div className={styles.projectsModal} data-theme="light" ref={modalRef}>
-      <h2>Projects</h2>
+      <h2 className={styles.name}>Projects</h2>
       <p className={styles.quote}>"I love to create things that people can have an emotional connection with and here's a few I have made so far."</p>
       
       <div className={styles.projectItem}>
