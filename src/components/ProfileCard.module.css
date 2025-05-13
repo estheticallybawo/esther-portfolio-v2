@@ -233,26 +233,6 @@
 
 /* Add to ProfileCard.module.css */
 
-.projectsModal {
-  position: fixed;
-  top: 50%;
-  left: -50%;
-  transform: translate(-50%, -50%);
-  background: #DDE6E6;
-  padding: 2rem;
-  border-radius: 1.5rem;
-  width: 80%;
-  max-width: 600px;
-  height: auto;
-  max-height: 80vh;
-  overflow-y: auto;
-  z-index: 1000;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  animation: fadeIn 0.3s ease-out;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch; 
-  overscroll-behavior: contain;
-}
 
 .iconGroup {
   display: flex;
@@ -385,7 +365,8 @@
 
 
 /* Education Modal Styles */
-.educationModal {
+.educationModal,
+.projectsModal {
   position: fixed;
   top: 50%;
   left: -50%;
@@ -400,6 +381,9 @@
   z-index: 1000;
   box-shadow: var(--shadow-lg);
   animation: fadeIn 0.3s ease-out;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; 
+  overscroll-behavior: contain;
 }
 
 .educationItem, .projectItem {
