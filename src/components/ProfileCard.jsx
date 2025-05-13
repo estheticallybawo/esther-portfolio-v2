@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import ThemeToggle from './ThemeToggle.jsx';
 import { FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
 import styles from './ProfileCard.module.css';
 import ProjectsPanel from './ProjectsPanel.jsx';
-
 
 
 export default function ProfileCard({ onOpenPanel }) {
@@ -19,6 +18,13 @@ export default function ProfileCard({ onOpenPanel }) {
         second: '2-digit',
         timeZone: 'UTC'
       });
+      const modalRef = useRef(null);
+      
+        useEffect(() => {
+          if (modalRef.current) {
+            modalRef.current.scrollTop = 0;
+          }
+        }, []);
 
       const [theme, setTheme] = useState('light');
 
@@ -33,7 +39,7 @@ export default function ProfileCard({ onOpenPanel }) {
   }, [theme]);
 
   return (
-    <div className={styles.card} data-theme={theme}>
+    <div className={styles.card} data-theme={theme} ref={modalRef}>
     <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
   
         <div className={styles.avaborder}>
@@ -58,7 +64,8 @@ export default function ProfileCard({ onOpenPanel }) {
   href="/Resume.pdf" 
   target="_blank" 
   rel="noopener noreferrer"
-  >Resume</a>
+  ref={modalRef}>
+  Resume</a>
 </div>
 
 

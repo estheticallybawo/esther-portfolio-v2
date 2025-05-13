@@ -236,18 +236,47 @@
 .projectsModal {
   position: fixed;
   top: 50%;
-  left: 50%;
+  left: -50%;
   transform: translate(-50%, -50%);
-  background: white;
+  background: #DDE6E6;
   padding: 2rem;
   border-radius: 1.5rem;
   width: 80%;
   max-width: 600px;
+  height: auto;
   max-height: 80vh;
   overflow-y: auto;
   z-index: 1000;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   animation: fadeIn 0.3s ease-out;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; 
+  overscroll-behavior: contain;
+}
+
+.iconGroup {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.iconLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: white;
+  color: #6a00f4;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.iconLink:hover {
+  background: linear-gradient(to right, #00c6ff, #9c00ff);
+  color: white;
+  transform: translateY(-2px);
 }
 
 .quote {
@@ -266,8 +295,16 @@
   border-bottom: none;
 }
 
+.projectIcons {
+  gap: 0.5rem;
+  position: relative;
+  text-decoration: none;
+
+
+}
+
 .projectItem h3 {
-  color: #6a00f4;
+  color: #740aff;
   margin-bottom: 0.5rem;
 }
 
@@ -292,27 +329,134 @@
   to { opacity: 1; transform: translate(-50%, -50%); }
 }
 
+@keyframes modalFadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -40%) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.projectsModal {
+  animation: modalFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.overlay {
+  animation: overlayFadeIn 0.3s ease-out forwards;
+}
+
+@keyframes overlayFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.iconLink {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.iconLink:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Custom scrollbar for modal */
+.projectsModal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.projectsModal::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.projectsModal::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #00c6ff, #9c00ff);
+  border-radius: 10px;
+}
+
+[data-theme="dark"] .projectsModal::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #6ed1ff, #9c03f5);
+}
+
+/* Card entrance animation */
+.card {
+  animation: cardEntrance 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button press effect */
+.gradientButton:active,
+.hireMeButton:active,
+.resumeButton:active {
+  transform: scale(0.98) translateY(1px);
+}
 /* Add overlay when card is open */
 .overlay {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  background: rgba(109, 109, 109, 0.5);
   z-index: 999;
+
+}
+
+
+.card,
+.projectsModal,
+.avatar,
+.name,
+.title,
+.bio,
+.buttonGroup,
+.socials a {
+  transition: 
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Smooth gradient transitions */
+.hireMeButton,
+.resumeButton::before,
+.gradientButton::after {
+  transition: background 0.5s ease;
 }
 
 
 
+/* Dark mode styles */
+[data-theme="dark"] .projectsModal,
+[data-theme="dark"] .quote {
+  background: #23324E;
+  color: #e2e8f0;
+}
 
+[data-theme="dark"] .iconLink {
+  background: #2d3748;
+  color: #6ed1ff;
+}
 
-
-
-
-
-
-
+[data-theme="dark"] .iconLink:hover {
+  background: linear-gradient(to right, #00c6ff, #9c00ff);
+  color: white;
+}
 
   [data-theme="dark"] .card,
   [data-theme="dark"] .avatar {
@@ -351,4 +495,51 @@
     color: #6ed1ff;
     transform: scale(1.05);
   }
- 
+
+  @media (max-width: 768px) {
+    .projectsModal {
+      top: 20px;
+      left: 50%;
+      max-width: none;
+      transform: translate(-50%, 0);
+      max-height: 500px;
+      padding: 1.5rem;
+      animation: mobileModalFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    
+    .card {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 998;
+    }
+    @keyframes mobileModalFadeIn {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, 20px) scale(0.98);
+      }
+      100% {
+        opacity: 1;
+        transform: translate(-50%, 0) scale(1);
+      }
+    }
+  
+    .iconGroup {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .iconLink {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  
