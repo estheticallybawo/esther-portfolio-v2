@@ -345,23 +345,109 @@
 
 /* Custom scrollbar for modal */
 .projectsModal::-webkit-scrollbar,
-.educationModal::-webkit-scrollbar
-{
+.educationModal::-webkit-scrollbar,
+.skillsModal::-webkit-scrollbar,
+.toolsModal::-webkit-scrollbar,
+.certificationsModal::-webkit-scrollbar {
   width: 8px;
 }
 
+
 .projectsModal::-webkit-scrollbar-track,
-.educationModal::-webkit-scrollbar-track
-{
+.educationModal::-webkit-scrollbar-track,
+.skillsModal::-webkit-scrollbar-track, 
+.toolsModal::-webkit-scrollbar-track,
+.certificationsModal::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.05);
   border-radius: 10px;
 }
 
 .educationModal::-webkit-scrollbar-thumb, 
-.projectsModal::-webkit-scrollbar-thumb {
+.projectsModal::-webkit-scrollbar-thumb,
+.skillsModal::-webkit-scrollbar-thumb,
+.toolsModal::-webkit-scrollbar-thumb,
+.certificationsModal::-webkit-scrollbar-thumb {
   background: linear-gradient(to bottom, #00c6ff, #9c00ff);
   border-radius: 10px;
 }
+
+
+/* Certifications Modal Styles */
+.certificationsModal {
+  position: fixed;
+  top: 50%;
+  left: 150%;
+  transform: translate(-50%, -50%);
+  background: #DDE6E6;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  width: 26.688rem;
+  max-width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: var(--shadow-lg);
+  animation: modalFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.certificationsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.certificationItem {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.certificationItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.certificationName {
+  font-weight: 600;
+  color: #111f27;
+  font-size: 1rem;
+}
+
+.certificationIssuer {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
+/* Dark Mode Styles */
+[data-theme="dark"] .certificationsModal {
+  background: #23324E;
+}
+
+[data-theme="dark"] .certificationName {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .certificationIssuer {
+  color: #a0aec0;
+}
+
+[data-theme="dark"] .certificationItem {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .certificationName {
+    font-size: 0.9rem;
+  }
+  
+  .certificationIssuer {
+    font-size: 0.75rem;
+  }
+}
+
 
 
 /* Education Modal Styles */
@@ -462,15 +548,211 @@
   color: #6ed1ff;
 }
 
-
-
-
-
-
-
+[data-theme="dark"] .projectsModal::-webkit-scrollbar {
+  width: 8px;
+}
 [data-theme="dark"] .projectsModal::-webkit-scrollbar-thumb {
   background: linear-gradient(to bottom, #6ed1ff, #9c03f5);
 }
+
+/* Skills Modal Styles */
+.skillsModal {
+  position: fixed;
+  top: 50%;
+  left: 150%;
+  transform: translate(-50%, -50%);
+  background: #DDE6E6;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  width: 26.688rem;
+  max-width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: var(--shadow-lg);
+  animation: modalFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.skillsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skillInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skillName {
+  font-weight: 500;
+  color: #0E1420;
+}
+
+.skillPercentage {
+  font-weight: 600;
+  color: #6a00f4;
+}
+
+.skillBar {
+  height: 8px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skillProgress {
+  height: 100%;
+  background: linear-gradient(to right, #00c6ff, #9c00ff);
+  border-radius: 4px;
+  transition: width 1s ease-out;
+}
+
+/* Dark Mode Styles */
+[data-theme="dark"] .skillsModal {
+  background: #23324E;
+}
+
+[data-theme="dark"] .skillName {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .skillBar {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .skillProgress {
+  background: linear-gradient(to right, #6ed1ff, #9c03f5);
+}
+
+/* Tools Modal Styles */
+.toolsModal {
+  position: fixed;
+  top: 50%;
+  left: -50%;
+  transform: translate(-50%, -50%);
+  background: #DDE6E6;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  width: 26.688rem;
+  max-width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: var(--shadow-lg);
+  animation: modalFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.toolsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.toolItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.toolHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.toolIcon {
+  font-size: 1.8rem;
+  color: #6a00f4;
+}
+
+.toolName {
+  font-weight: 500;
+  color: #0E1420;
+  flex-grow: 1;
+}
+
+.toolProficiency {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.skillBar {
+  height: 8px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+.skillProgress {
+  height: 100%;
+  background: linear-gradient(to right, #00c6ff, #9c00ff);
+  border-radius: 4px;
+  transition: width 1s ease-out;
+}
+
+.skillPercentage {
+  font-weight: 600;
+  color: #6a00f4;
+  width: 40px;
+  text-align: right;
+}
+
+/* Dark Mode Styles */
+[data-theme="dark"] .toolsModal {
+  background: #23324E;
+}
+
+[data-theme="dark"] .toolName {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .toolIcon {
+  color: #6ed1ff;
+}
+
+[data-theme="dark"] .skillBar {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .skillProgress {
+  background: linear-gradient(to right, #6ed1ff, #9c03f5);
+}
+
+[data-theme="dark"] .skillPercentage {
+  color: #6ed1ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .toolHeader {
+    gap: 0.75rem;
+  }
+  
+  .toolIcon {
+    font-size: 1.5rem;
+  }
+  
+  .toolName {
+    font-size: 0.9rem;
+  }
+  
+  .skillPercentage {
+    font-size: 0.8rem;
+  }
+}
+
 
 /* Card entrance animation */
 .card {

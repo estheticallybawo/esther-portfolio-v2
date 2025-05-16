@@ -4,11 +4,20 @@ import { FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
 import styles from './ProfileCard.module.css';
 import ProjectsPanel from './ProjectsPanel.jsx';
 import EducationPanel from './EducationPanel.jsx';
+import SkillsPanel from './SkillPanel.jsx';
+import ToolsPanel from './ToolsPanel.jsx';
+import CertificationPanel from './CertificationPanel.jsx';
+
 
 
 export default function ProfileCard({ onOpenPanel }) {
   const [showProjects, setShowProjects] = useState(false);
   const [showEducation, setShowEducation] = useState(false);
+  const [showSkills, setShowSkills] = useState(false);
+  const [showTools, setShowTools] = useState(false);
+  const [showCertification, setShowCertification] = useState(false);
+
+
 
 
     const currentDateTime = new Date().toLocaleString('en-US', {
@@ -74,12 +83,14 @@ export default function ProfileCard({ onOpenPanel }) {
 
       <div className={styles.buttonGroup1}>
       <button className={styles.gradientButton} onClick={() => setShowProjects(true)}>Projects</button>
-      <button className={styles.gradientButton} onClick={() => onOpenPanel('skills')}>Skills</button>
+      <button className={styles.gradientButton} onClick={() => setShowSkills(true)}>Skills</button>
       <button className={styles.gradientButton} onClick={() => onOpenPanel('aspirations')}>Aspirations</button>
       <button className={styles.gradientButton} onClick={() => setShowEducation(true)}>Education</button>
-      <button className={styles.gradientButton} onClick={() => onOpenPanel('tools')}>Tools</button>
-      <button className={styles.gradientButton} onClick={() => onOpenPanel('certification')}>Certification</button>
+      <button className={styles.gradientButton} onClick={() => setShowTools(true)}>Tools</button>     
+      <button className={styles.gradientButton} onClick={() => setShowCertification(true)}>Certification</button>
       </div>
+
+       
 
       {showProjects && (
         <>
@@ -94,6 +105,28 @@ export default function ProfileCard({ onOpenPanel }) {
             <EducationPanel onClose={() => setShowEducation(false)} />
           </>
         )}
+
+        {showSkills && (
+          <>
+            <div className={styles.overlay} onClick={() => setShowSkills(false)} />
+            <SkillsPanel onClose={() => setShowSkills(false)} />
+          </>
+        )}
+        {showTools && (
+          <>
+            <div className={styles.overlay} onClick={() => setShowTools(false)} />
+            <ToolsPanel onClose={() => setShowTools(false)} />
+          </>
+        )}
+
+        {showCertification && (
+          <>
+            <div className={styles.overlay} onClick={() => setShowCertification(false)} />
+            <CertificationPanel onClose={() => setShowCertification(false)} />
+          </>
+        )}
+
+
 
       <div className={styles.socials}>
   <a href="https://instagram.com/estheticallybawo" target="_blank" rel="noopener noreferrer">
