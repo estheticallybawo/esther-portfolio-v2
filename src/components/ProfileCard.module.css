@@ -15,8 +15,10 @@
     justify-content: center;
     background: #DDE6E6 ;
     border-radius: 1.5rem;
-    padding: 0.9rem;
+    padding: 1.5rem;
     width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
     max-width: 400px;
     box-shadow: var(--shadow-lg);
     position: relative;
@@ -998,8 +1000,8 @@
       top: 20px;
       bottom: 20px;
       left: 50%;
-      max-width: 70%;
-      max-height: 60%;
+      max-width: 100%;
+      max-height: 100%;
       overflow-y: auto;
       border-radius: 1rem;
       transform: translate(-50%, 0);
@@ -1012,13 +1014,11 @@
       position: relative;
       z-index: 1;
       transform: translateY(0);
-      width: 80%;
+      width: 90%;
       height: 80%;
       align-items: center;
       justify-content: center;
-      padding: 1rem;
-      margin-top: 20px;
-      margin-bottom: 20px;
+      padding: 2rem;
       overflow: hidden;
     }
     
