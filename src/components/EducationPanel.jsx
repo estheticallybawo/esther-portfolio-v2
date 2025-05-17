@@ -17,7 +17,7 @@ export default function EducationPanel({ onClose }) {
       <br></br>
       <div className={styles.educationItem}>
         <div className={styles.educationHeader}>
-          <h4>Miva Open University, Itako Abuja</h4>
+          <h4>Miva Open University, Utako, Abuja</h4>
           <span className={styles.educationYear}>'26</span>
         </div>
         <p className={styles.educationDegree}>BSc, Software Engineering</p>

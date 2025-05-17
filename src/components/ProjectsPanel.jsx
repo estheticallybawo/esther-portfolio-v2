@@ -17,6 +17,27 @@ export default function ProjectsPanel({ onClose }) {
       <h2 className={styles.name}>Projects</h2>
       <p className={styles.quote}>"I design and develop with human connection in mind. These pieces reflect my commitment to meaningful experiences:"</p>
       
+      {/* Add your new project here */}
+      <div className={styles.projectItem}>
+        <h3 className={styles.projectName}>Interactive Portfolio Card v2</h3>
+        <p>A responsive portfolio card with smooth animations and mobile-first design. Built with React, CSS modules, and modern web technologies. Features include responsive layout, gradient animations, and accessible modal dialogs. This project demonstrates my frontend development skills and attention to user experience details.</p>
+      
+        <div className={styles.iconGroup}>
+          <a href='https://github.com/estheticallybawo/esther-portfolio-v2'
+            target='_blank'
+            rel="noopener noreferrer"
+            className={styles.iconLink}>
+            <FaGithub />
+          </a>
+          <a href='https://my-portfolio-ten-bay-35.vercel.app'
+            target='_blank'
+            rel="noopener noreferrer"
+            className={styles.iconLink}>
+            <FaLink />
+          </a>
+        </div>
+      </div>
+
       <div className={styles.projectItem}>
         <h3 className={styles.projectName}>Profile Card v1</h3>
         <p>Used HTML, CSS, and JavaScript to build a responsive profile card that showcases my details, social links, and a clean UI. This project pushed me to work under a tight deadline while ensuring a sleek, mobile-friendly design. With the Dark mode feature and Parallax effect, deployed with Vercel</p>
