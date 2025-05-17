@@ -3,8 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-
+  overflow: auto;
   background: linear-gradient(270deg, #00d4ff, #AE26EF);
   background-size: 400% 400%;
   animation: moveGradient 15s ease infinite;
@@ -22,3 +21,4 @@
     background-position: 0% 50%;
   }
 }
+
