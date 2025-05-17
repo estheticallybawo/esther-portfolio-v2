@@ -7,6 +7,7 @@ import EducationPanel from './EducationPanel.jsx';
 import SkillsPanel from './SkillPanel.jsx';
 import ToolsPanel from './ToolsPanel.jsx';
 import CertificationPanel from './CertificationPanel.jsx';
+import AspirationsPanel from './AspirationsPanel.jsx';
 
 
 
@@ -16,6 +17,7 @@ export default function ProfileCard({ onOpenPanel }) {
   const [showSkills, setShowSkills] = useState(false);
   const [showTools, setShowTools] = useState(false);
   const [showCertification, setShowCertification] = useState(false);
+  const [showAspirations, setShowAspirations] = useState(false);
 
 
 
@@ -84,7 +86,7 @@ export default function ProfileCard({ onOpenPanel }) {
       <div className={styles.buttonGroup1}>
       <button className={styles.gradientButton} onClick={() => setShowProjects(true)}>Projects</button>
       <button className={styles.gradientButton} onClick={() => setShowSkills(true)}>Skills</button>
-      <button className={styles.gradientButton} onClick={() => onOpenPanel('aspirations')}>Aspirations</button>
+      <button className={styles.gradientButton} onClick={() => setShowAspirations(true)}>Aspirations</button>
       <button className={styles.gradientButton} onClick={() => setShowEducation(true)}>Education</button>
       <button className={styles.gradientButton} onClick={() => setShowTools(true)}>Tools</button>     
       <button className={styles.gradientButton} onClick={() => setShowCertification(true)}>Certification</button>
@@ -126,6 +128,12 @@ export default function ProfileCard({ onOpenPanel }) {
           </>
         )}
 
+          {showAspirations && (
+            <>
+              <div className={styles.overlay} onClick={() => setShowAspirations(false)} />
+              <AspirationsPanel onClose={() => setShowAspirations(false)} />
+            </>
+          )}
 
 
       <div className={styles.socials}>

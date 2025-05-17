@@ -283,8 +283,7 @@
 
 }
 
-.projectItem h3 {
-  color: #740aff;
+.projectItem {
   margin-bottom: 0.5rem;
 }
 
@@ -348,7 +347,8 @@
 .educationModal::-webkit-scrollbar,
 .skillsModal::-webkit-scrollbar,
 .toolsModal::-webkit-scrollbar,
-.certificationsModal::-webkit-scrollbar {
+.certificationsModal::-webkit-scrollbar,
+.aspirationsModal::-webkit-scrollbar {
   width: 8px;
 }
 
@@ -357,7 +357,8 @@
 .educationModal::-webkit-scrollbar-track,
 .skillsModal::-webkit-scrollbar-track, 
 .toolsModal::-webkit-scrollbar-track,
-.certificationsModal::-webkit-scrollbar-track {
+.certificationsModal::-webkit-scrollbar-track,
+.aspirationsModal::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.05);
   border-radius: 10px;
 }
@@ -366,7 +367,8 @@
 .projectsModal::-webkit-scrollbar-thumb,
 .skillsModal::-webkit-scrollbar-thumb,
 .toolsModal::-webkit-scrollbar-thumb,
-.certificationsModal::-webkit-scrollbar-thumb {
+.certificationsModal::-webkit-scrollbar-thumb,
+.aspirationsModal::-webkit-scrollbar-thumb {
   background: linear-gradient(to bottom, #00c6ff, #9c00ff);
   border-radius: 10px;
 }
@@ -409,7 +411,7 @@
 
 .certificationName {
   font-weight: 600;
-  color: #111f27;
+  color: #6a00f4;
   font-size: 1rem;
 }
 
@@ -426,7 +428,7 @@
 }
 
 [data-theme="dark"] .certificationName {
-  color: #e2e8f0;
+  color: #6ed1ff;
 }
 
 [data-theme="dark"] .certificationIssuer {
@@ -492,7 +494,9 @@
   font-style: italic;
 }
 
-.educationDegree {
+.educationDegree, 
+.projectName,
+.projectTitle {
   color: #6a00f4;
   font-weight: 500;
 }
@@ -535,7 +539,9 @@
 }
 
 [data-theme="dark"] .educationDegree,
-[data-theme="dark"] .educationHeader {
+[data-theme="dark"] .educationHeader,
+[data-theme="dark"] .projectName,
+[data-theme="dark"] .projectTitle {
   color: #6ed1ff;
 }
 
@@ -551,7 +557,7 @@
 [data-theme="dark"] .projectsModal::-webkit-scrollbar {
   width: 8px;
 }
-[data-theme="dark"] .projectsModal::-webkit-scrollbar-thumb {
+[dark-theme="dark"] .projectsModal::-webkit-scrollbar-thumb {
   background: linear-gradient(to bottom, #6ed1ff, #9c03f5);
 }
 
@@ -754,6 +760,105 @@
 }
 
 
+/* Aspirations Modal Styles */
+.aspirationsModal {
+  position: fixed;
+  top: 50%;
+  left: 150%;
+  transform: translate(-50%, -50%);
+  background: #DDE6E6;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  width: 26.688rem;
+  max-width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: var(--shadow-lg);
+  animation: modalFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.quoteContainer {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin: 1.5rem;
+}
+
+.quoteText {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #0E1420;
+  line-height: 1.6;
+}
+
+.projectsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.projectItem {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.projectItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.projectTitle {
+  font-size: 1.2rem;
+  color: #6a00f4;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.projectDescription {
+  font-size: 1rem;
+  color: #0E1420;
+  font-weight: 500;
+}
+
+/* Dark Mode Styles */
+[data-theme="dark"] .aspirationsModal {
+  background: #23324E;
+}
+
+[data-theme="dark"] .quoteContainer {
+  background: rgba(45, 55, 72, 0.7);
+}
+
+[data-theme="dark"] .quoteText,
+[data-theme="dark"] .projectDescription {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .projectItem {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .quoteText {
+    font-size: 1rem;
+  }
+  
+  .projectTitle {
+    font-size: 1.1rem;
+  }
+  
+  .projectDescription {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
 /* Card entrance animation */
 .card {
   animation: cardEntrance 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
@@ -871,7 +976,12 @@
   }
 
   @media (max-width: 768px) {
-    .projectsModal {
+    .projectsModal,
+    .educationModal,
+    .skillsModal,
+    .toolsModal,
+    .certificationsModal,
+    .aspirationsModal {
       top: 20px;
       left: 50%;
       max-width: none;

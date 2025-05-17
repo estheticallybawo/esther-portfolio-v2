@@ -18,7 +18,7 @@ export default function ProjectsPanel({ onClose }) {
       <p className={styles.quote}>"I love to create things that people can have an emotional connection with and here's a few I have made so far."</p>
       
       <div className={styles.projectItem}>
-        <h3>Profile Card v1</h3>
+        <h3 className={styles.projectName}>Profile Card v1</h3>
         <p>Used HTML, CSS, and JavaScript to build a responsive profile card that showcases my details, social links, and a clean UI. This project pushed me to work under a tight deadline while ensuring a sleek, mobile-friendly design. With the Dark mode feature and Parallax effect, deployed with Vercel</p>
       
         <div className={styles.iconGroup}>
@@ -38,7 +38,7 @@ export default function ProjectsPanel({ onClose }) {
       </div>
 
       <div className={styles.projectItem}>
-        <h3>Color Guessing Game</h3>
+        <h3 className={styles.projectName}>Color Guessing Game</h3>
         <p>Used HTML CSS, and JavaScript to build a responsive Color Guessing Game for kids with color blindness with retro words UI, sound effects, and content to make the game interactive and engaging.</p>
         <div className={styles.iconGroup}>
           <a href='https://github.com/estheticallybawo/hngx-stage1-Game'
