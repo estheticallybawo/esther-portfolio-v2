@@ -1,5 +1,9 @@
 .appContainer {
   min-height: 100vh;
+  min-height: -webkit-fill-available; /* For mobile browsers */
+  min-height: -moz-available; /* For mobile browsers */
+  min-height: fill-available; /* For mobile browsers */
+  min-width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
