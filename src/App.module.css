@@ -6,12 +6,16 @@
   overflow: hidden;
 
   background: linear-gradient(270deg, #00d4ff, #AE26EF);
+  background-size: 400% 400%;
   animation: moveGradient 15s ease infinite;
 }
 
 @keyframes moveGradient {
   0% {
     background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
   }
 
   100% {

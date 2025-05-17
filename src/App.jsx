@@ -1,7 +1,8 @@
 // Import React and ReactDOM
 import React, { useState } from 'react';
 import styles from './App.module.css';
-import ProfileCard from './components/ProfileCard';
+import ProfileCard from './components/ProfileCard.jsx';
+
 
 export default function App() {
   const [activePanel, setActivePanel] = useState(null);
@@ -12,9 +13,10 @@ export default function App() {
   };
 
   return (
+    <>
     <div className={styles.appContainer}>
       <ProfileCard onOpenPanel={handleOpenPanel} />
     </div>
+    </>
   );
 }
-
