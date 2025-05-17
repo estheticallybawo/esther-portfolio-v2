@@ -148,7 +148,7 @@ export default function ProfileCard({ onOpenPanel }) {
   </a>
 </div>
       <div className={styles.dateTime}>
-        {currentDateTime.replace(',', ' @').replace('GMT', '')} UTC
+        <p>Designed and Developed by Esther Bawo Tsotso <a href="https://profile-card-two-tan.vercel.app" target="_blank" rel="noopener noreferrer"> v1 </a></p>
       </div>
     </div>
 
