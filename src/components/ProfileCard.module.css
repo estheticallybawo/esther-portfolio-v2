@@ -261,8 +261,10 @@
 
 .quote {
   font-style: italic;
+  margin-top: 1rem;
   margin-bottom: 1.5rem;
   color: #555;
+  align-items: center;
 }
 
 .projectItem {
