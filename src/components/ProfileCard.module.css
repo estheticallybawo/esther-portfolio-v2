@@ -1000,11 +1000,11 @@
       top: 20px;
       left: 50%;
       max-width: 70%;
-      max-height: 80vh;
+      max-height: 60%;
       overflow-y: auto;
-      border-radius: 1.5rem;
+      border-radius: 1rem;
       transform: translate(-50%, 0);
-      padding: 1.5rem;
+      padding: 1rem;
       margin: 0 auto;
       box-shadow: var(--shadow-lg);
       animation: mobileModalFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -1016,8 +1016,10 @@
       transform: translateY(0);
       width: 100%;
       height: auto;
-      align-items: center
-      ;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      margin: 0 auto;
     }
     
     .overlay {
