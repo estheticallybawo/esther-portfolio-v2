@@ -15,11 +15,9 @@
     justify-content: center;
     background: #DDE6E6 ;
     border-radius: 1.5rem;
-    padding: 1rem;
-    width: 20.688rem;
+    padding: 1.5rem;
+    width: 100%;
     max-width: 400px;
-    height: 35rem;
-    max-height: 682px;
     box-shadow: var(--shadow-lg);
     position: relative;
     transition: transform 0.3s ease;
@@ -1014,12 +1012,13 @@
       position: relative;
       z-index: 1;
       transform: translateY(0);
-      width: 100%;
-      height: auto;
+      width: 80%;
+      height: 80%;
       align-items: center;
       justify-content: center;
-      padding: 1rem;
+      padding: 2.5rem;
       margin: 0 auto;
+      overflow: hidden;
     }
     
     .overlay {
