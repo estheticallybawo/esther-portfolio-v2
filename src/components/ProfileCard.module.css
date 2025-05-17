@@ -1017,6 +1017,7 @@
       transform: translateY(0);
       width: 90%;
       top: -20px;
+      bottom: 10px;
       height: 80%;
       align-items: center;
       justify-content: center;
