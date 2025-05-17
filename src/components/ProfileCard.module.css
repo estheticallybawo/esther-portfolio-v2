@@ -1016,8 +1016,8 @@
       z-index: 1;
       transform: translateY(0);
       width: 90%;
-      top: -20px;
-      bottom: 10px;
+      margin-top: 0.5rem;
+      margin-bottom: auto;
       height: 80%;
       align-items: center;
       justify-content: center;
