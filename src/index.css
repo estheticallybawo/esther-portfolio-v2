@@ -7,4 +7,5 @@
 html {
   block-size: 100%; /* Modern property */
   text-size-adjust: 100%; /* Prevent iOS zoom */
+  overflow: hidden;
 }
