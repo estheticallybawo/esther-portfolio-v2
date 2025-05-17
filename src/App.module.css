@@ -1,9 +1,9 @@
 .appContainer {
-  min-height: 120vh;
+  min-height: 110vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: auto;
+  overflow: hidden;
   background: linear-gradient(270deg, #00d4ff, #AE26EF);
   background-size: 400% 400%;
   animation: moveGradient 15s ease infinite;
