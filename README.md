@@ -1,6 +1,6 @@
 # Esther's Developer Portfolio (v2)
 
-![Portfolio Screenshot](/image.png)  
+![Portfolio Screenshot](/public/image.png)  
 *Originally designed in Figma • Iterative improvement from v1*
 
 A modern, interactive portfolio showcasing my frontend development skills and professional journey, redesigned from the ground up with enhanced UX and visual appeal.
