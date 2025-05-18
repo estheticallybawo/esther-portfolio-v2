@@ -76,6 +76,27 @@ export default function ProjectsPanel({ onClose }) {
           </a>
         </div>
       </div>
+      <div className={styles.projectItem}>
+        <h3 className={styles.projectName}>Textily - AI Powered Text Processor</h3>
+        <p> An AI-powered web application that performs summarization, translation, and language detection on user-inputted text. It leverages Google Gemini API to deliver fast and intelligent text analysis, all within a clean, responsive interface.</p>
+          <p>Tech Stack: Nextjs, CSS Modules, Vercel, Gemini API (Google)
+        Note: This app currently only works on Chrome Canary due to its use of experimental browser features not supported by regular Chrome.</p>
+        <div className={styles.iconGroup}>
+          <a href='https://github.com/estheticallybawo/text-processor'
+            target='_blank'
+            rel="noopener noreferrer"
+            className={styles.iconLink}>
+            <FaGithub />
+          </a>
+          <a href='https://text-processor-zeta.vercel.app/'
+            target='_blank'
+            rel="noopener noreferrer"
+            className={styles.iconLink}>
+            <FaLink />
+          </a>
+        </div>
+      </div>
+
       
       <button className={styles.closeButton} onClick={onClose}><IoMdCloseCircleOutline /></button>
     </div>

@@ -65,7 +65,7 @@
     font-family:"Hind Madurai", sans-serif;
     font-weight: 500;
     font-size: 0.9rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     text-align: center;
   }
 
@@ -462,7 +462,15 @@
   
   .certificationIssuer {
     font-size: 0.75rem;
+  } 
+  .buttonGroup1 {
+    gap: 1rem 2.5rem;
   }
+  .hireMeButton,
+  .resumeButton {
+    width: 120px;
+  }
+  
 }
 
 
@@ -930,6 +938,7 @@
 .resumeButton::before,
 .gradientButton::after {
   transition: background 0.5s ease;
+  background-size: auto;
 }
 
 
@@ -1022,6 +1031,7 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
+      padding: 1.5rem;
     }
     
     .overlay {
