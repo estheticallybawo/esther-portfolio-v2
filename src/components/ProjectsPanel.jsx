@@ -96,6 +96,27 @@ export default function ProjectsPanel({ onClose }) {
           </a>
         </div>
       </div>
+<div className={styles.projectItem}>
+        <h3 className={styles.projectName}>Ticket Generator App</h3>
+        <p> A sleek, minimal web application that allows users to generate event or conference-style tickets with personalized details. Built using Next.js, TypeScript, and CSS Modules, the app showcases responsive design, clean layout handling, and form-driven dynamic content generation.</p>
+          <p>Tech Stack: Next.js, TypeScript, CSS Modules, Vercel
+            Designed for speed, simplicity, and reusability — ideal for hackathons, events, or product launches.</p>
+        <div className={styles.iconGroup}>
+          <a href='https://github.com/estheticallybawo/ticket-generator/tree/master'
+            target='_blank'
+            rel="noopener noreferrer"
+            className={styles.iconLink}>
+            <FaGithub />
+          </a>
+          <a href='https://ticket-generator-sepia.vercel.app/'
+            target='_blank'
+            rel="noopener noreferrer"
+            className={styles.iconLink}>
+            <FaLink />
+          </a>
+        </div>
+      </div>
+
 
       
       <button className={styles.closeButton} onClick={onClose}><IoMdCloseCircleOutline /></button>
