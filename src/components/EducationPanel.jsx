@@ -31,14 +31,6 @@ export default function EducationPanel({ onClose }) {
         <p className={styles.educationDegree}>Diploma, Frontend Engineering</p>
       </div>
 
-      <div className={styles.educationItem}>
-        <div className={styles.educationHeader}>
-          <h4>Federal Polytechnic, Nekede</h4>
-          <span className={styles.educationYear}>'11</span>
-        </div>
-        <p className={styles.educationDegree}>Diploma, Public Administration</p>
-      </div>
-
       <div className={styles.educationSeparator}>
         <span>Future Studies</span>
       </div>
