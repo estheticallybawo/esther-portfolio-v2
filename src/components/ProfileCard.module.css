@@ -233,15 +233,17 @@
             transition: all 0.3s ease;
             color: #23324E;
             text-decoration: none;
-    transition: transform 0.2s ease, color 0.3s ease;
   }
   
   .socials a:hover {
     background: var(--primary-gradient);
             color: white;
-            transform: translateY(-2px);
+            transform: translateY(-3px);
             box-shadow: var(--shadow-lg);
             border: 2px solid;
+            transition: all 0.3s ease;
+
+
   }
 
 
@@ -945,13 +947,19 @@
 
 /* Dark mode styles */
 [data-theme="dark"] .projectsModal,
-[data-theme="dark"] .quote {
-  background: #23324E;
+[data-theme="dark"] .quote,
+[data-theme="dark"] .skillsModal,
+[data-theme="dark"] .toolsModal,
+[data-theme="dark"] .aspirationsModal,
+[data-theme="dark"] .educationModal,
+[data-theme="dark"] .certificationsModal,
+[data-theme="dark"] .card {    
+  background: #000b26;
   color: #e2e8f0;
 }
 
 [data-theme="dark"] .iconLink {
-  background: #2d3748;
+  background: #000c22;
   color: #6ed1ff;
 }
 
@@ -960,9 +968,8 @@
   color: white;
 }
 
-  [data-theme="dark"] .card,
   [data-theme="dark"] .avatar {
-    background: #23324E;
+    background: #000b26;
   }
   
   [data-theme="dark"] .name,
@@ -974,7 +981,7 @@
   }
   
   [data-theme="dark"] .resumeButton {
-    background: #23324E;
+    background: #000b26;
     color: #e2e8f0;
   }
   
@@ -984,13 +991,15 @@
   }
   
   [data-theme="dark"] .socials a {
-    background: #2d3748;
+    background:  #000314;
     color: #e2e8f0;
+   
   }
   [data-theme="dark"] .socials a:hover {
     background: var(--primary-gradient);
     color: white;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
     box-shadow: var(--shadow-lg);
   }
 
