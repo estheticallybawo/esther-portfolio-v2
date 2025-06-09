@@ -4,9 +4,22 @@
   align-items: center;
   justify-content: center;
   overflow: auto;
-  background: linear-gradient(270deg, #00d4ff, #AE26EF);
+  background: var(--app-bg, #fff);
   background-size: 400% 400%;
   animation: moveGradient 15s ease infinite;
+}
+
+/* Dark theme support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --app-bg: linear-gradient(135deg, #3e4a50, #4b5e72, #3a5461, #3c5d7e);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --app-bg: linear-gradient(135deg, #fff, #f0f0f0, #e0e0e0, #fff);
+  }
 }
 
 @keyframes moveGradient {
@@ -16,7 +29,6 @@
   50% {
     background-position: 100% 50%;
   }
-
   100% {
     background-position: 0% 50%;
   }
